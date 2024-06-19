@@ -1,0 +1,875 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+  
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+::selection{
+    color: rgb(243, 232, 232);
+    background: rgb(0, 60, 255);
+}
+
+/* header Start */
+header{
+    height: 100vh;
+    position: relative;
+    
+}
+.navBer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 10vh;
+    align-items: center;
+    background:#333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: relative;
+    
+}
+
+header .navBer ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    
+}
+header .navBer ul li a{
+    color: #fff;
+    display: block;
+}
+header .navBer ul li a:hover{
+    color: rgb(191, 191, 236);
+    transform: scale(1.1);
+
+}
+header .navBer .icon i{
+    color: #fff;
+    padding: 0 10px;
+    cursor: pointer;
+}
+header .navBer .icon i:hover{
+    color: blue;
+}
+header .navBer .icon{
+    display: flex;
+    color: #c2b0b0;   
+
+}
+header .navBer .logo{
+    color: #ffeaea;
+    font-size: 20px;
+    cursor: context-menu;
+}
+header .navBer .logo span{
+    color: blue;
+}
+
+header .navBer .icon .user{
+    padding: 9px 5px;
+}
+header .navBer #user{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    background: #333;
+   border-top: 1px solid #c2b0b0;
+   display: flex;
+   align-items: center;
+   z-index: 1001;
+   padding: 0.5rem 1rem;
+   clip-path: polygon(0 0 ,100% 0 , 100% 0,0 0);
+}
+header .navBer #user.actef{
+    clip-path: polygon(0 0 , 100% 0, 100% 100%,0 100% );
+
+}
+header .navBer #user #text{
+    width: 98%;
+    height: 30px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+header .navBer #user .fa-solid{
+    color: #ffeaea;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
+header .logn-form{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #3333338c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    /* display: none; */
+}
+header .logn-form.form-cons{
+    top: 0;
+}
+header .logn-form form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+   background: #fff;
+}
+header .logn-form form h3{
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    padding-bottom: 5px;   
+}
+header .logn-form form .box{
+    width: 25rem;
+    height: 2.7rem;
+    margin: .5rem .5rem;
+    font-size: 1rem;
+    padding-left: 4px;
+    border-radius: none;
+}
+header .logn-form form .btn{
+    width: 25rem;
+    height: 2.7rem;
+    margin: .5rem .5rem;
+    font-size: 1rem;
+    color: blue;
+    background: #faa33293;
+    border: blue solid 3px;
+}
+header .logn-form form .btn:hover{
+    color: wheat;
+    background: blue;
+}
+header .logn-form .fa-times{
+    color: #ffeaea;
+    font-size: 35px;
+    position: absolute;
+    top: 10%;
+    right:1%;
+}
+header .logn-form .fa-times:hover{
+    color: blue;
+}
+/* ---------------
+--- icon bars-----
+------------------*/
+header .navBer .fa-bars{
+    color: #ffeaea;
+    font-size: 25px;
+    padding: 4px;
+    border:1px solid #ffeaea ;
+    border-radius: 5px;
+    transition: all 0s linear;
+    display: none;
+}
+header .navBer .fa-bars.noneborder{
+    border: none;
+    padding: 6px;
+}
+header .hoem{
+    z-index: 0; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+header .hoem .contenr{
+    position: absolute;
+    z-index: 1;
+    
+}
+header .hoem .contenr h1{
+    color: #ffff;
+    text-align: center;
+    font-size: 3rem;
+}
+header .hoem .contenr p{
+    color: #ffff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.hoem .more{
+background: #faa33293;
+color: blue;
+border: 2.3px solid rgba(4, 0, 255, 0.699);
+padding: 10px 20px;
+margin: 10px 0 ;
+margin-left: 40%;
+border-radius: 10px;
+text-align: center;
+}
+.more:hover{
+    background: blue;
+    color: rgb(255, 255, 255);
+}
+header .hoem .controls-veduo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+header .hoem .controls-veduo video{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+header .hoem .controls{
+    padding: .5rem;
+    border-radius: 2.5rem;
+    background: rgba(0, 0, 0, 0.582);
+    position: relative;
+    top: 10rem;
+}
+header .hoem .controls .video-btn{
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+header .hoem .controls .video-btn.blue{
+    background-color: blue;
+}
+/* header End */
+
+/* book stert  */
+.book{
+    height: auto;
+    margin: 20px 0;
+}
+ .heading{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom:30px ;
+}
+ .heading span{
+    padding: 8px 18px;
+    background: blue;
+    border-radius: 4px;
+    font-size: 2rem;
+   text-transform: uppercase;
+}
+
+.book .contenr{
+   display: flex;
+   flex-wrap: wrap;
+}
+.book .contenr .img-form{
+    min-width:400px ;
+    max-width:600px;
+    padding-left: 40px;
+}
+.book .form{
+    height: 500px;
+    width: auto;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px ;
+    margin-bottom: 30px;
+    box-shadow:  2px 1px 8px 4px rgb(63, 51, 51);
+    
+}
+
+.book .form .inbot-div h3{
+    font-size: 25px;
+}
+.book .form .inbot-div input{
+    width: 400px;
+    height: 50px;
+    border: .4rem solid rgb(99, 89, 89);
+    padding: 3px;
+    margin: 10px 2px;
+    font-size: 20px;
+}
+.btn-form{
+    background: #faa33293;
+    color: blue;
+    border: 2.3px solid rgba(4, 0, 255, 0.699);
+    padding: 12px 25px;
+    margin: 10px 0 ;
+    /* margin-left: 40%; */
+    border-radius: 2px;
+}
+/* book End  */
+
+/* packages stert */
+.packages .conteinr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+.more{
+    background: #faa33293;
+    color: blue;
+    border: 2.3px solid rgba(4, 0, 255, 0.699);
+    padding: 10px 20px;
+    margin: 10px 0 ;
+    border-radius: 10px; 
+    
+}
+.conteinr .btn{
+    margin-top: 60px;
+    position: relative;
+    top: 1rem;
+    left: 10px;
+}
+
+.packages .conteinr .box{
+    width:340px;
+    height: 470px;
+    border-radius: 4px;
+    box-shadow:  2px 1px 10px 2px rgb(63, 51, 51);
+    margin: 10px 15px;
+}
+.packages .conteinr .content{
+    padding: 15px;
+}
+.packages .conteinr .box img{
+    border-radius: 4px 4px 0 0;
+    width:100%; 
+} 
+.packages .conteinr .content h4{
+    font-size: 23px;
+}
+.packages .conteinr .content h4 i{
+    color: blue;
+}
+.packages .conteinr .content p{
+    font-size: 20px;
+}
+.packages .conteinr .content p span{
+    text-decoration: line-through;
+    color: #333;
+    font-size: 13px;
+    padding-left: 6px;
+}
+.packages .conteinr .content .stert i{
+    color: #bafd00;
+}
+/* packages End */
+
+/* Services stert */
+
+.Services .contenr{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    
+}
+.Services .contenr .boxs{
+    width: 320px;
+    height: 200px;
+    padding: 10px;
+    margin: 15px 20px;
+}
+.Services .contenr .boxs:hover{
+    box-shadow:  2px 1px 10px 2px rgb(63, 51, 51);
+
+}
+.Services .contenr .boxs {
+    text-align: center;
+}
+.Services .contenr .boxs i{
+    font-size: 50px;
+    color: blue;
+}
+.Services .contenr .boxs .parg h3{
+    font-size: 30px;
+}
+.Services .contenr .boxs .parg p{
+    color: #333;
+}
+/* Services End */
+
+/* Gallary stert */
+.Gallary{
+    padding: 30px;
+    background: #e4dcdc;
+    margin: 20px 0;
+}
+.Gallary .contenr-gallart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Gallary .contenr-gallart .box{
+    overflow: hidden;
+    flex: 0 1 20rem;      
+    position: relative;     
+    width: 350px;
+    
+    padding: 10px;
+    background: #fff;
+    margin: 15px;
+    
+}
+.Gallary .contenr-gallart .box img{
+    width: 100%;
+    height: 240px; 
+}
+
+.contenr-gallart .box .contet h4{
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px 0;
+    color: blue;
+}
+.box .contet p{
+    color: wheat;
+    font-size: 18px;
+}
+.box .contet button{
+    border-radius: 0;
+    top: 20px;
+}
+.Gallary .contenr-gallart .box .contet{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    top: -100%;
+    left: 0;
+}
+.box:hover.box .contet{
+    top: 0;
+}
+/* Gallary End */
+
+/* Review stert */
+.review .contenr{
+    text-align: center;
+    padding: 0 30px;
+    margin: 20px 0;
+}
+.review .contenr .box img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.review .contenr .box h3{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    padding: 5px 30px;
+}
+.review .contenr .box p{
+    font-size: 20px;
+    padding: 5px 0;
+}
+.review .contenr .box .stert{
+    color: blue;
+    padding: 5px 0;
+}
+/* Review End */
+
+/* Contact stert */
+.Contact .cintenr{
+    display: flex;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Contact .cintenr img{
+    width: 500px;
+}
+.Contact .cintenr form input{
+    border: none;
+    min-width: 300px;
+    max-width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    background: #c9c2c260;
+    margin: 10px 8px;
+}
+.Contact .cintenr form textarea{
+    width: 500px;
+    font-size: 16px;
+    background: #c9c2c260;
+    margin: 10px 8px;
+    border: none;
+    padding: 15px;
+}
+.Contact .cintenr form{
+    margin-top: 20px;
+}
+.Contact .cintenr form button{
+    border-radius: 0;
+    width: 160px;
+    font-size: 16px;
+}
+/* Contact End */
+
+/* footer stert */
+footer{
+    background: #333333a1;
+}
+footer .ceby{
+    text-align: center;
+    padding: 17px 10px;
+    font-size: 25px;
+    color: #fff;
+}
+footer .ceby p a{
+    color: blue;
+}
+/* footer End */
+
+/* tibelt sizes */
+
+ 
+/* Mobile sizes  */
+
+@media (max-width: 450px){
+    header .navBer .fa-bars{
+        display: inline;
+    }
+    header .navBer{
+        position: relative;
+    }
+    header .navBer ul{
+        position: absolute;
+        left: 100%;
+        right: 0;
+        top: 9vh;
+        display: block;
+        background: #333;
+        width: 80%;
+        height: 91vh;
+        text-align: center;
+        display: none;
+    }
+    header .navBer ul.lef{
+        left: auto;
+        right: 0;
+        display: inline;
+    }
+    header .navBer ul li a{
+        padding: 15px 0;
+        font-size: 23px;
+        border-bottom: 1px solid red;
+    }
+    /* nev  end*/
+    header .hoem .contenr h1{
+        font-size: 2rem;
+        padding: 10px 0;
+    }
+    header .hoem .contenr p{
+        padding: 10px 0 10px 0 ;
+    }
+    .hoem .more{
+        margin-left: 31%;
+    }
+    /* form logn  */
+    header .logn-form form{
+        margin: .5rem;
+        padding: 1rem .5rem;
+        border-radius: .5rem;
+       background: #fff;
+    }
+    header .logn-form{
+        width: 100%;
+    }
+    header .logn-form form .btn{
+        width: 90%;
+    }
+    header .logn-form form .box{
+        width: 18rem;
+        margin: 1rem .7rem;
+    }
+    .heading{
+        margin-bottom:20px ;
+    }
+    .heading span{
+        padding: 4px 4px;
+        border-radius: 2px;
+        font-size: 1.3rem;
+    }
+    .book .form {
+        height: 415px;
+        width: auto;
+        margin: auto;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .book .form .inbot-div input {
+        width: 278px;
+        height: 38px;
+        border: .3rem solid rgb(99, 89, 89);
+        padding: 3px;
+        margin: 8px 2px;
+        font-size: 18px;
+    }
+    .book .contenr .img-form {
+        min-width: auto;
+        max-width: 600px;
+        padding-left: 10px;
+    }
+    header .hoem .controls{
+        margin-top: 10px;
+    }
+    .Contact .cintenr form textarea {
+        width: 295px;
+    }
+    .Contact .cintenr form button{
+            margin-left: 10px;
+    }
+    footer .ceby{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 600px){
+    header .navBer .fa-bars{
+        display: inline;
+    }
+    header .navBer{
+        position: relative;
+    }
+    header .navBer .logo{
+        font-size: 26px
+    }
+    header .navBer ul{
+        position: absolute;
+        left: 100%;
+        right: 0;
+        top: 9vh;
+        display: block;
+        background: #333;
+        width: 80%;
+        height: 91vh;
+        text-align: center;
+        display: none;
+    }
+    header .navBer ul.lef{
+        left: auto;
+        right: 0;
+        display: inline;
+    }
+    header .navBer ul li a{
+        padding: 15px 0;
+        font-size: 23px;
+        border-bottom: 1px solid red;
+    }
+    /* nev  end*/
+    header .hoem .contenr h1{
+        font-size:2.3rem;
+        padding: 10px 0;
+    }
+    header .hoem .contenr p{
+        padding: 10px 0 10px 0 ;
+        font-size:1.4rem;
+
+    }
+    .hoem .more{
+        margin-left: 35%;
+    }
+    /* form logn  */
+    header .logn-form form{
+        margin: .5rem;
+        padding: 1rem .5rem;
+        border-radius: .5rem;
+       background: #fff;
+    }
+    header .logn-form{
+        width: 100%;
+    }
+    header .logn-form form .btn{
+        width: 90%;
+    }
+    header .logn-form form .box{
+        width: 18rem;
+        margin: 1rem .7rem;
+    }
+    .heading{
+        margin-bottom:30px ;
+    }
+    .heading span{
+        padding: 7px 7px;
+        border-radius: 3px;
+        font-size: 1.6rem;
+    }
+    .book .form {
+        height: 449px;
+        width: auto;
+        margin: auto;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .book .form .inbot-div input {
+        width: 342px;
+        height: 46px;
+        padding: 6px;
+        margin: 8px 2px;
+        font-size: 21px;
+    }
+    .book .contenr .img-form {
+        min-width: auto;
+        max-width: 600px;
+        padding-left: 10px;
+    }
+    header .hoem .controls{
+        margin-top: 10px;
+    }
+    .Contact .cintenr form input{
+        min-width: 400px;
+    }
+    .Contact .cintenr form textarea {
+        width: 400px;
+    }
+    .Contact .cintenr form {
+        text-align: center;
+    }
+    .Contact .cintenr form button{
+            margin-left: -15px;
+    }
+    footer .ceby{
+        font-size: 24px;
+    }
+    header .navBer .icon i{
+        padding: 4px 9px;
+        font-size: 20px;
+    }
+    header .navBer .icon .glass{
+        margin-left: 70%;
+    }
+   
+    header .navBer #user #iconUser{
+        margin-left: none;
+
+    }
+}
+@media (min-width: 701px) and (max-width: 1000px){
+
+    header .navBer ul{
+        width: 60%;
+    }
+    .book .contenr .img-form{
+        position: absolute;
+        z-index: -1;
+        opacity: .3;
+        max-width: 650px;
+    }
+    .Services .contenr .boxs{
+        width: 310px;
+    }
+    .Gallary {
+        padding: 0;
+        padding-top: 20px;
+    }
+    .packages .conteinr .box{
+        margin: 7px 9px;
+        width: 325px;
+    }
+    header .logn-form form .box {
+        margin: 1.5rem 1.5rem
+    }
+    header .logn-form form .btn{
+        margin: 0.5rem 1.5rem
+
+    }
+}
+@media (min-width: 601px) and (max-width: 700px){
+    header .navBer .fa-bars{
+        display: inline;
+    }
+    header .navBer{
+        position: relative;
+    }
+    header .navBer .logo{
+        font-size: 26px
+    }
+    header .navBer ul{
+        position: absolute;
+        left: 100%;
+        right: 0;
+        top: 9vh;
+        display: block;
+        background: #333;
+        width: 80%;
+        height: 91vh;
+        text-align: center;
+        display: none;
+    }
+    header .navBer ul.lef{
+        left: auto;
+        right: 0;
+        display: inline;
+    }
+    header .navBer ul li a{
+        padding: 15px 0;
+        font-size: 23px;
+        border-bottom: 1px solid red;
+    }
+    header .navBer ul{
+        width: 60%;
+    }
+    .book .contenr .img-form{
+        position: absolute;
+        z-index: -1;
+        opacity: .3;
+        max-width: 650px;
+    }
+    .Services .contenr .boxs{
+        width: 310px;
+    }
+    .Gallary {
+        padding: 0;
+        padding-top: 20px;
+    }
+    .packages .conteinr .box{
+        margin: 7px 9px;
+        width: 325px;
+    }
+    header .logn-form form .box {
+        margin: 1.5rem 1.5rem
+    }
+    header .logn-form form .btn{
+        margin: 0.5rem 1.5rem
+
+    }
+    header .navBer .icon .glass{
+        margin-left: 170%;
+    }
+}
